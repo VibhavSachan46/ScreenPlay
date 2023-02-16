@@ -31,10 +31,10 @@ class MainActivity : AppCompatActivity() {
 
         requestRuntimePermission()
         //for Nav Drawer
-//        toggle = ActionBarDrawerToggle(this, binding.root, R.string.open, R.string.close)
-//        binding.root.addDrawerListener(toggle)
-//        toggle.syncState()
-//        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        toggle = ActionBarDrawerToggle(this, binding.root, R.string.open, R.string.close)
+        binding.root.addDrawerListener(toggle)
+        toggle.syncState()
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         setFragment(VideosFragment())
 
@@ -51,16 +51,16 @@ class MainActivity : AppCompatActivity() {
 
             return@setOnItemSelectedListener true
         }
-//        binding.navView.setNavigationItemSelectedListener {
-//            when(it.itemId){
-//                R.id.feedbackNav -> Toast.makeText(this, "Feedback", Toast.LENGTH_SHORT).show()
-//                R.id.themes -> Toast.makeText(this, "Themes", Toast.LENGTH_SHORT).show()
-//                R.id.sortOrderNav-> Toast.makeText(this, "Sort Order", Toast.LENGTH_SHORT).show()
-//                R.id.aboutNav -> Toast.makeText(this, "About", Toast.LENGTH_SHORT).show()
-//                R.id.exitNav -> exitProcess(1)
-//            }
-//            return@setNavigationItemSelectedListener true
-//        }
+        binding.navView.setNavigationItemSelectedListener {
+            when(it.itemId){
+                R.id.feedbackNav -> Toast.makeText(this, "Feedback", Toast.LENGTH_SHORT).show()
+                R.id.themes -> Toast.makeText(this, "Themes", Toast.LENGTH_SHORT).show()
+                R.id.sortOrderNav-> Toast.makeText(this, "Sort Order", Toast.LENGTH_SHORT).show()
+                R.id.aboutNav -> Toast.makeText(this, "About", Toast.LENGTH_SHORT).show()
+                R.id.exitNav -> exitProcess(1)
+            }
+            return@setNavigationItemSelectedListener true
+        }
     }
 
     private fun setFragment(fragment: Fragment){
